@@ -5,7 +5,7 @@ In this section three main points are discussed :
 - Dirty read
 - NonRepeatable read
 This code shows a scenario that Exclusive lock can't work with shared lock:
-![picture](lock.PNG)
+![picture](image/lock.PNG)
 
 as we see in the picture below we read the Dirty data in the second transaction:
 ![picture](image/DR.PNG)
