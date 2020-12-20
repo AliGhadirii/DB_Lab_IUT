@@ -53,21 +53,13 @@ select SubTotal
 from Sales.SalesOrderHeader
 where SalesOrderID = 43659;
 
-update Sales.SalesOrderHeader
-set SubTotal = SubTotal - 100
-where SalesOrderID = 43659;
-
-select SubTotal
-from Sales.SalesOrderHeader
-where SalesOrderID = 43659;
-
 waitfor delay '00:00:10';
 
 select SubTotal
 from Sales.SalesOrderHeader
 where SalesOrderID = 43659;
 
-rollback;
+commit;
 
 
 
