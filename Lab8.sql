@@ -1,11 +1,30 @@
 -------------------------------Q1-----------------------------
+--code to show that shared lock can't work with exclusive lock:
 
+--section1
+begin transaction tran1
 
+select SubTotal
+from Sales.SalesOrderHeader
+where SalesOrderID = 43659;
 
+waitfor delay '00:00:6';
 
+commit;
 
+select SubTotal
+from Sales.SalesOrderHeader
+where SalesOrderID = 43659;
 
+--section2
 
+begin transaction tran2
+
+update Sales.SalesOrderHeader
+set SubTotal = 0
+where SalesOrderID = 43659;
+
+commit;
 
 
 -------------------------------Q2-----------------------------
@@ -45,7 +64,6 @@ commit;
 -- at first we should run section1 as first query then
 -- we have to run the section 2 as seconde query in another window
 
-
 --section 1
 begin transaction tran1
 
@@ -60,9 +78,6 @@ from Sales.SalesOrderHeader
 where SalesOrderID = 43659;
 
 commit;
-
-
-
 
 
 --section 2
