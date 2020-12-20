@@ -4,6 +4,8 @@ In this section three main points are discussed :
 - Exclusive lock can't work Simultaneously with shared lock
 - Dirty read
 - NonRepeatable read
+
+
 This code shows a scenario that Exclusive lock can't work with shared lock:
 ![picture](image/lock.PNG)
 
