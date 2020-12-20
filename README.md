@@ -5,4 +5,5 @@ In this section three main points are discussed :
 - NonRepeatable read
 - 
 as we see in the picture below we read the Dirty data in the second transaction:
-![picture] (image/DR.PNG)
+
+![picture](image/DR.PNG)
