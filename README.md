@@ -7,3 +7,7 @@ In this section three main points are discussed :
 as we see in the picture below we read the Dirty data in the second transaction:
 
 ![picture](image/DR.PNG)
+
+here we see the non repeatable read problems as the data we select in first transaction had been changed via transaction2
+
+![picture](image/NRR.PNG)
