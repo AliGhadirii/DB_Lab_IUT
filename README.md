@@ -1,5 +1,5 @@
 # DB_Lab_IUT
-# **LAb 8**
+# **Lab 8**
 In this section three main points are discussed :
 - Dirty read
 - NonRepeatable read
